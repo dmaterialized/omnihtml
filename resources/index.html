@@ -11,6 +11,7 @@
 <link rel = "stylesheet" type="text/css" href="vendors/css/grid.css">
 <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
 <link rel="stylesheet" type="text/css" href="css/queries.css">
+<link rel="stylesheet" type="text/css" href="vendors/css/animate.css">
 <script type="text/javascript" href="https://cdn.jsdelivr.net/jparallax/2.0.3/jquery.parallax.min.js"></script><script type="text/javascript" href="https://cdn.jsdelivr.net/jparallax/2.0.3/jquery.event.frame.js"></script>
 <script type="text/javascript" href="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
     <style>
@@ -28,11 +29,12 @@
     <nav>
         <div class="row">
         <img src="img/logo-white.png" alt="Omnifood logo" class="logo">
+        <img src="img/logo.png" alt="Omnifood logo" class="logo-black" href="#features">
             <ul class="main-nav">
-                <li><a href="#showmore">Food Delivery</a></li>
+                <li><a href="#features">Food Delivery</a></li>
                 <li><a href="#howitworks">How It Works</a></li>
                 <li><a href="#cities">Our Cities</a></li>
-                <li><a href="#signup">Sign Up</a></li>
+                <li><a href="#plans">Sign Up</a></li>
                 <li></li>
             </ul>
         </div>
@@ -40,17 +42,16 @@
     <div class="hero-text-box">
     <h1>Goodbye junk food. 
         <br>Hello, super-healthy meals!</h1>
-        <a class="btn btn-full" href="#meals">I'm hungry </a>
-        <a class="btn btn-ghost" href="#showmore">Show me more </a>
+        <a class="btn btn-full js--scroll-to-plans" href="#meals">I'm so hungry! </a>
+        <a class="btn btn-ghost js--scroll-to-start" href="#showmore">Show me more </a>
     </div>
 </header>
-    <a name="showmore"></a>
-    <section class="section-features">
+    <section class="section-features js--section-features" id="features">
     <div class="row">
         <h2>Get food fast &mdash; not fast food.</h2>
         <p class="long-copy">Hello, we’re Omnifood &mdash; your new premium food delivery service. We know you’re always busy. No time for cooking. So let us take care of that: we’re really good at it, we promise!</p>
         </div> 
-        <div class = "row">
+        <div class = "row js--wp-1"> <!-- first animation -->
         <div class="col span-1-of-4 box">
             <i class="ion-ios-infinite-outline icon-big"></i> <!-- infinite icon ! -->
             <h3>Up to 365 days/year</h3>
@@ -123,8 +124,7 @@
             </li> 
         </ul>
     </section>
-    <a name="howitworks"></a>
-<section class="section-steps">
+<section class="section-steps" id="howitworks">
             <div class="row">
              <h2>How it works &mdash; Simple as 1, 2, 3</h2>
              </div>
@@ -132,7 +132,7 @@
     <div class="row">
                 
         <div class="col span-1-of-2 steps-box">
-            <img src="img/app-iPhone.png" alt="Our app on iPhone" class="app-screen">
+            <img src="img/app-iPhone.png" alt="Our app on iPhone" class="app-screen js--wp-2">
                
         </div>
                 
@@ -159,13 +159,12 @@
                         </div>
                         </div>
     </section>
-        <a name="cities"></a>
-        <section class="section-cities">
+        <section class="section-cities" id="cities">
             <div class="row">
             <h2>We're currently in these cities:</h2>
             </div>
             
-            <div class="row">
+            <div class="row js--wp-3">
                 <div class="col span-1-of-4 box">
                     <img src="img/lisbon-3.jpg" alt="Lisbon">
                     <h3>Lisbon</h3>
@@ -254,21 +253,19 @@
                 </div>
              <div class="col span-1-of-3">
                 <blockquote>I was looking for a quick and easy food delivery service in San Franciso. I tried a lot of them and ended up with Omnifood. Best food delivery service in the Bay Area. Keep up the great work!
-
                 <cite><img src="img/customer-3.jpg">Milton Chapman</cite>
                 </blockquote>
                 </div>
         </div>
     
     </section>
-    <a name="signup"></a>
-    <section class="section-plans">
+    <section class="section-plans js--section-plans" id="plans">
     <div class="row">
         <h2>Start eating healthy today</h2>
     </div>
         <div class="row">
             <div class="col span-1-of-3">
-            <div class="plan-box">
+            <div class="plan-box js--wp-4">
                 <div>
                 <h3>Premium</h3>
                 <p class="plan-price">$399 <span>/ month</span></p>
@@ -430,9 +427,19 @@
         </div>
         <div class="row">
         <p> Copyright &copy; 2016 by Omnifood. All rights reserved.</p>
+            
+            
         </div>
         </div>
     </footer>
+    <!-- a sad little include for JQuery libs, when everything else is done with. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+    <script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.jsdelivr.net/selectivizr/1.0.3b/selectivizr.min.js"></script>
+    <script src="/resources/vendors/js/jquery.waypoints.min.js"></script>
+    <script src="js/script.js"></script>
+
 </body>
     <!--- 
 
@@ -456,9 +463,6 @@ Title: How it works - Simple as 1, 2, 3
 	1.	Choose the subscription plan that best fits your needs and sign up today.
 	2.	Order your delicious meal using our mobile app or website. Or you can even call us!
 	3.	Enjoy your meal after less than 20 minutes. See you the next time!
-
-
-
 
 
 Section 6: Sign up and pricing plans
